@@ -1,15 +1,9 @@
 class SparkRs < Formula
   desc "Spark clone"
   homepage "https://github.com/ekroon/spark-rs"
-  url "https://github.com/ekroon/spark-rs/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "3c6a16239e3b513dfc4816dec92a1e02f872087b282e8fd5e82209274ad12c4d"
+  url "https://github.com/ekroon/spark-rs/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "3956ba5d8d39b2060183cf790a1838525c42b11da488b79eea888bad435f2220"
   license ""
-
-  bottle do
-    root_url "https://github.com/ekroon/homebrew-tap/releases/download/spark-rs-0.2.1"
-    sha256 cellar: :any_skip_relocation, big_sur:      "db9a82a638f8bfb2f057f6dee1be6a0a69732ce0f8f8f514d95911427977d42b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4c218781a22641b792dab69369a8cc3ddd69e57b0407d8f2ce1351b2a7aefce"
-  end
 
   depends_on "rust" => :build
 
