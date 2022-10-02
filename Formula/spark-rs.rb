@@ -5,6 +5,12 @@ class SparkRs < Formula
   sha256 "3956ba5d8d39b2060183cf790a1838525c42b11da488b79eea888bad435f2220"
   license ""
 
+  bottle do
+    root_url "https://github.com/ekroon/homebrew-tap/releases/download/spark-rs-0.3.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "3d5316a74b3c565b51ee1f3fcb5b042be1f13a200d368de4bfbd1fffda041296"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7e134e669b1bbc2a885b5d09f49c7688ca3eebb53e46a98e09d235e9357d4ce2"
+  end
+
   depends_on "rust" => :build
 
   def install
