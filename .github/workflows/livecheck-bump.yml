@@ -1,0 +1,22 @@
+name: livecheck-bump
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  livecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+      - name: Update Homebrew formula
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          # Required, custom GitHub access token with only the 'public_repo' scope enabled
+          token: ${{ secrets.TOKEN }}
+          # Bump all outdated formulae in this tap
+          tap: ekroon/homebrew-tap
+          # Optional, if don't want to check for already open PRs
+          force: false # true
+          # Need to set this input if want to use `brew livecheck`
+          livecheck: true
