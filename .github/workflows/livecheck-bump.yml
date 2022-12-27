@@ -7,8 +7,6 @@ jobs:
   livecheck:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Homebrew
-        run: echo ${{ secrets.GITHUB_TOKEN }}
       - name: Update Homebrew formula
         uses: dawidd6/action-homebrew-bump-formula@v3
         with:
