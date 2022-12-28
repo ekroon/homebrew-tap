@@ -27,6 +27,6 @@ class SparkRs < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    assert_equal "▁▄█", shell_output("#{bin}/spark 1 2 3").strip
+    assert_equal "abc", shell_output("#{bin}/spark --ticks abc 1 2 3").strip
   end
 end
