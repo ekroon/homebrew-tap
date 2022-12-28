@@ -1,8 +1,8 @@
 class SparkRs < Formula
   desc "Spark clone"
   homepage "https://github.com/ekroon/spark-rs"
-  url "https://github.com/ekroon/spark-rs/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "3b4be426caa2e736e29f739b864117dd6ad8d7b47597db2bca204830328caa60"
+  url "https://github.com/ekroon/spark-rs/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "0ed8613deeebffd00977a0fe2ac42b43915241a971fcad7fd094dae1c5308408"
   license ""
 
   bottle do
