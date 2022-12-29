@@ -6,9 +6,9 @@ class SparkRs < Formula
   license ""
 
   bottle do
-    root_url "https://github.com/ekroon/homebrew-tap/releases/download/spark-rs-0.5.0"
-    sha256 cellar: :any_skip_relocation, big_sur:      "2a4d368ad1793237f7d48f239cd9374c472ce966689004a434a5b79a1e722236"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2253140345cc7bca10532c305dec5b8ffc36a177a57709956795287bb2c6de37"
+    root_url "https://github.com/ekroon/homebrew-tap/releases/download/spark-rs-0.6.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "e6b6a2f329dc5263828b7edd7f4edb66998bc3436847ccf3b6f3d056c7737eac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5e22277a0dc8ab911f8c143e5dc8c779c90122dbb9fcc5330308ee42906347bc"
   end
 
   depends_on "rust" => :build
