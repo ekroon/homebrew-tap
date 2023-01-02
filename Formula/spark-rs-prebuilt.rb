@@ -1,14 +1,8 @@
 class SparkRsPrebuilt < Formula
   desc "Spark clone"
   homepage "https://github.com/ekroon/spark-rs"
-  on_macos do
-    url "https://github.com/ekroon/spark-rs/releases/download/v0.6.2/spark-v0.6.2-macos.tar.gz"
-    sha256 ""
-  end
-  on_linux do
-    url "https://github.com/ekroon/spark-rs/releases/download/v0.6.2/spark-v0.6.2-linux.tar.gz"
-    sha256 ""
-  end
+  url "https://github.com/ekroon/spark-rs/releases/download/v0.6.2/spark-v0.6.2-macos.tar.gz" if OS.mac? else "https://github.com/ekroon/spark-rs/releases/download/v0.6.2/spark-v0.6.2-linux.tar.gz"
+  sha256 ""
   license ""
 
   def install
