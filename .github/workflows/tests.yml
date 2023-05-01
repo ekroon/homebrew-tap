@@ -17,10 +17,10 @@ jobs:
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        run: |
-          rm -rf "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"
+      #- name: Unlink workspace
+      #  run: |
+      #    rm -rf "${GITHUB_WORKSPACE}"
+      #    mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
