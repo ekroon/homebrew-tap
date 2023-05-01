@@ -33,8 +33,10 @@ jobs:
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
+      
+      - run: brew doctor --verbose --debug
 
-      - run: brew test-bot --verbose --only-cleanup-before
+      - run: brew test-bot --verbose --debug --only-cleanup-before
 
       - run: brew test-bot --only-setup
 
