@@ -15,7 +15,7 @@ jobs:
           # Bump all outdated formulae in this tap
           tap: ekroon/homebrew-tap
           # Optional, if don't want to check for already open PRs
-          force: false # true
+          force: force # true
           # Need to set this input if want to use `brew livecheck`
           livecheck: true
           message: |
