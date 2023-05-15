@@ -1,23 +1,23 @@
-name: livecheck-bump
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
-jobs:
-  livecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update Homebrew formula
-        uses: dawidd6/action-homebrew-bump-formula@v3
-        with:
-          # Required, custom GitHub access token with only the 'public_repo' scope enabled
-          token: ${{ secrets.TOKEN }}
-          # Bump all outdated formulae in this tap
-          tap: ekroon/homebrew-tap
-          # Optional, if don't want to check for already open PRs
-          force: force # true
-          # Need to set this input if want to use `brew livecheck`
-          livecheck: true
-          message: |
-            **⚠️ Do not merge this PR directly! ⚠️**
-            Wait for `brew test-bot` to complete, then label it with `pr-pull` instead to make the bot build and upload the bottle.
+# name: livecheck-bump
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 0 * * *'
+# jobs:
+#   livecheck:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Update Homebrew formula
+#         uses: dawidd6/action-homebrew-bump-formula@v3
+#         with:
+#           # Required, custom GitHub access token with only the 'public_repo' scope enabled
+#           token: ${{ secrets.TOKEN }}
+#           # Bump all outdated formulae in this tap
+#           tap: ekroon/homebrew-tap
+#           # Optional, if don't want to check for already open PRs
+#           force: force # true
+#           # Need to set this input if want to use `brew livecheck`
+#           livecheck: true
+#           message: |
+#             **⚠️ Do not merge this PR directly! ⚠️**
+#             Wait for `brew test-bot` to complete, then label it with `pr-pull` instead to make the bot build and upload the bottle.
